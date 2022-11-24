@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id("com.apollographql.apollo3").version("3.7.1")
 }
 
 android {
@@ -60,4 +61,11 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+
+    // Apollo
+    implementation("com.apollographql.apollo3:apollo-runtime:3.7.1")
+}
+
+apollo {
+    packageName.set("com.beatrice.androidgraphql")
 }
