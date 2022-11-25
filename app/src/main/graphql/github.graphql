@@ -1,4 +1,4 @@
-query GetLatestTrendingRepositoriesInLastWeek($first: Int, $query: String!, $type: SearchType!) {
+query GetLatestTrendingRepositoriesInLastWeek($first: Int!, $query: String!, $type: SearchType!) {
   search(first: $first, query: $query, type: $type) {
     edges {
       node {

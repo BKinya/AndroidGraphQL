@@ -64,6 +64,21 @@ dependencies {
 
     // Apollo
     implementation("com.apollographql.apollo3:apollo-runtime:3.7.1")
+
+    // Logcat
+    implementation 'com.squareup.logcat:logcat:0.1'
+
+    // coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
+    // Lifecycle
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
+    // Material 3
+    implementation "androidx.compose.material3:material3:1.0.1"
 }
 
 apollo {
