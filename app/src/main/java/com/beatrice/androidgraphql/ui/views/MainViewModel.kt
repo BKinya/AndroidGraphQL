@@ -21,11 +21,9 @@ class MainViewModel : ViewModel() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun getLatest() {
-        logcat("TEST"){"inside vm"}
         viewModelScope.launch {
             val repository = MainRepositoryImpl()
             repository.getLatestTrendingRepositoriesInLastWeek().collectLatest {
-                logcat("TEST"){"collecting result"}
                 logcat("GitHub_Repos ") { "size VM => ${it?.size}}" }
                 it?.let {
                     _repos.value = it

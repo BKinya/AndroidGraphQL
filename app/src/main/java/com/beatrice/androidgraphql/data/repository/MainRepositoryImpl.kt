@@ -27,10 +27,8 @@ class MainRepositoryImpl() : MainRepository {
             type = SearchType.REPOSITORY
         )
         val response = apolloClient.query(query = queryCall).execute()
-        logcat("TEST") { "size => ${response.data?.search?.edges?.size}" }
         val repoes: List<GitRepo?>? = response.data?.search?.edges?.let { result ->
             result.map { edge ->
-                logcat("TEST"){"prepping result"}
                 edge?.let {
                     val repo = it.node?.onRepository
                     repo?.let { repo ->
